@@ -9,6 +9,7 @@ var stand1,stand2;
 var polygon;
 var slingShot;
 var polygon_img;
+var score = 0
 function preload(){
   polygon_img=loadImage("polygon.png");
 }
@@ -73,6 +74,7 @@ function draw() {
   text("Drag the polygon to destroy the blocks",300,30);
   textSize(10);
   text("Press Space to get a second Chance to Play!!",650 ,350);
+  text("SCORE : "+score,750,40)
   ground.display();
   stand1.display();
   stand2.display();
@@ -115,6 +117,23 @@ function draw() {
   image(polygon_img ,polygon.position.x,polygon.position.y,40,40);
 
   slingShot.display();
+
+  blocks1.score();
+  blocks2.score();
+  blocks3.score();
+  blocks4.score();
+  blocks5.score();
+  blocks6.score();
+  blocks7.score();
+  blocks8.score();
+  blocks9.score();
+  blocks10.score();
+  blocks11.score();
+  blocks12.score();
+  blocks13.score();
+  blocks14.score();
+  blocks15.score();
+  blocks16.score();
   
 }
 function mouseDragged(){
